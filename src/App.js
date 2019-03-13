@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Mensaje from './Mensaje';
 
-class App extends Component {
+class MiComponente extends Component {
+  constructor(props){
+    super(props)
+    this.state = { mensajeIn: this.props.variable }
+
+  }
   render() {
+    var mundo="Mundo feliz";
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>Ejercicio INPUT</h1>
+        <Mensaje msg="amigos"/> 
       </div>
     );
   }
 }
 
-export default App;
+export default MiComponente;
